@@ -1,4 +1,4 @@
-name: eurlex-env
+name: spacy36
 channels:
   - conda-forge
   - defaults
