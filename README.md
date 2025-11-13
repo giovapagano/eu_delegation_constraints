@@ -6,7 +6,7 @@
 
 ## 📘 Overview
 
-This section of the repository contains the replication materials for the NLP pipeline employed in the article  
+This repository contains the replication materials for the NLP pipeline employed in the article  
 *“Identifying Delegation and Constraints in Legislative Texts: A Computational Method Applied to the European Union”* (European Union Politics).
 
 The package reproduces all preprocessing, model training, and classification steps implemented in **Python**, as well as the statistical analyses provided in **Stata**.  
