@@ -1,0 +1,36 @@
+name: eurlex-env
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ---- CORE PYTHON ----
+  - python=3.10
+  - pip
+  - numpy=1.26
+  - pandas=2.1
+  - scipy
+  - scikit-learn
+  - tqdm
+  - jsonlines
+  - jinja2
+
+  # ---- PIP (project-specific) ----
+  - pip:
+      # spaCy + models
+      - spacy==3.6.1
+      - en-core-web-lg==3.6.0
+
+      # HuggingFace / Transformers
+      - torch==2.4.0
+      - transformers==4.57.1
+      - huggingface-hub==0.36.0
+      - tokenizers==0.22.1
+      - safetensors==0.6.2
+
+      # Utilities
+      - smart-open==6.4.0
+      - pathy==0.11.0
+      - typer==0.9.4
+      - regex==2024.5.15
+      - requests==2.32.5
