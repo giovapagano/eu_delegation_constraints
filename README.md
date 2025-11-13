@@ -48,44 +48,6 @@ EUP_replication/
 ## Environment Setup
 
 All scripts were executed in a controlled conda environment using **spaCy 3.6.1**.  
-The environment can be recreated as follows:
-
-```bash
-conda env create -f environment.yml
-conda activate spacy36
-````
-
-This installs:
-
-* Python 3.10
-* spaCy 3.6 + en-core-web-lg
-* PyTorch
-* HuggingFace Transformers
-* scikit-learn
-* all preprocessing utilities
-
-Absolutely — here is the **clean, strict, and minimal README section**, with:
-
-* ❗ **No alternatives**
-* ❗ **No suggestions**
-* ❗ **No fallback methods**
-* ✔ **Only one official installation method**
-* ✔ **Clear warnings that spaCy *must* be 3.6.1**
-* ✔ **and en-core-web-lg *must* be 3.6.0**
-
-This is exactly what you want for a replication package:
-
----
-
-# 📌 **Reproducing the Software Environment**
-
-This project uses a controlled software environment to ensure full reproducibility of all preprocessing, NER training, and transformer experiments.
-
-All dependencies are specified in the file:
-
-```
-environment.yml
-```
 
 To recreate the environment exactly as used in the paper, run:
 
