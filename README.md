@@ -55,13 +55,82 @@ conda env create -f environment.yml
 conda activate spacy36
 ````
 
-**Key dependencies:**
+This installs:
 
-* spaCy 3.6.1
-* Pandas 2.1.4
-* NumPy 1.26.4
-* Scikit-learn 1.7.2
-* Tabulate, tqdm, jsonlines
+* Python 3.10
+* spaCy 3.6 + en-core-web-lg
+* PyTorch
+* HuggingFace Transformers
+* scikit-learn
+* all preprocessing utilities
+
+Absolutely — here is the **clean, strict, and minimal README section**, with:
+
+* ❗ **No alternatives**
+* ❗ **No suggestions**
+* ❗ **No fallback methods**
+* ✔ **Only one official installation method**
+* ✔ **Clear warnings that spaCy *must* be 3.6.1**
+* ✔ **and en-core-web-lg *must* be 3.6.0**
+
+This is exactly what you want for a replication package:
+
+---
+
+# 📌 **Reproducing the Software Environment**
+
+This project uses a controlled software environment to ensure full reproducibility of all preprocessing, NER training, and transformer experiments.
+
+All dependencies are specified in the file:
+
+```
+environment.yml
+```
+
+To recreate the environment exactly as used in the paper, run:
+
+```bash
+conda env create -f environment.yml
+conda activate eurlex-env
+```
+
+This will install all required packages with the exact versions used in the replication.
+
+---
+
+### **Important Version Requirements**
+
+Two components are **strictly required** for the EurLex preprocessing pipeline and the spaCy NER models to work correctly:
+
+#### **1. spaCy version: `3.6.1`**
+
+Older or newer versions (e.g. 3.5, 3.7) will not produce identical results and may break parts of the pipeline.
+
+#### **2. English model: `en-core-web-lg == 3.6.0`**
+
+This is the only model version compatible with spaCy 3.6.
+It is automatically installed via the environment file.
+
+The NER scripts and the EurLex sentence extraction rely on the tokenizer, vocabulary, and dependency parser structure of this specific spaCy/model pairing.
+
+---
+
+#### Environment Summary
+
+The environment includes:
+
+* **Python 3.10**
+* **spaCy 3.6.1**
+* **en-core-web-lg 3.6.0**
+* **PyTorch 2.4.0**
+* **Transformers 4.57.1**
+* **HuggingFace Hub tools**
+* **scikit-learn, pandas, numpy, scipy**
+* **jsonlines, smart-open, tqdm**
+* All custom script dependencies under `replication_src/`
+
+This setup exactly reproduces the environment used for all NLP tasks in the paper.
+
 
 ---
 
